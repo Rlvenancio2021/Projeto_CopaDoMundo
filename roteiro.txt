@@ -1,0 +1,64 @@
+## Objetivo do programa ##
+
+	Programa criado para acompanhar a evolução dos jogos da Copa do Mundo de 2022.
+
+## Estrutura do Programa ##
+
+	1 criar a competição (fases do campeonato)
+		# Atributos #
+			1 Lista de Times
+			2 Calendário de jogos
+			3 Classificação
+			4 Artilheiro
+			5 Gols
+			6 Pontuação
+			7 Time Vencedor
+			8 Time Perdedor
+			9 Confronto
+			10 Premiação
+
+		# Método # 
+			Incluir time na lista de times
+			Excluir time na lista de times
+			Incluir as datas dos jogos
+			Alterar as datas dos jogos
+			Incluir quais times irão se enfrentar
+			Definir time vencedor e Perdedor
+			Atribuir pontuação para os times
+		# Observação #	
+			Quantidade de partido por fase
+				Fase de Grupo (42 partidas)
+				Oitavas de Finais (8 partidas)
+				Quarta de Finais (4 partidas)
+				Semifinal (2 partidas)
+				Decisão do Terceiro Lugar (1 partida)
+				Final (1 partida)
+	2 criar os times
+		# Atributos #
+			Lista de times (32 times)
+			Lista de jogadores (26 jogadores)
+			Técnico de cada time (1 técnico)
+		
+		# Método #
+			Incluir jogadores
+			Excluir jogadores
+			Incluir técnico
+			Excluir técnico
+	3 criar estrutura de pontuação
+		Fase de Grupo
+			Classifica os dois primeiro de cada Grupo
+		Demais fases
+			Mata-Mata
+	4 criar o calendário da competição
+		Data e quantidade de jogos
+
+	5 Jogadores
+		# Atributos #
+			Nome do jogador
+			Gol marcado
+		
+		# Método #
+			Incluir jogador
+			Excluir jogador
+			Incluir gol marcado
+			Excluir gol marcado
