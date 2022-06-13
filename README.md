@@ -56,3 +56,5 @@ A competição acontece em **6 etapas**, sendo elas ***Fase de Grupo***, ***Oita
 É necessário primeiro organizar as idéias, entender melhor o problema que deseja resolver, detalhar o projeto, definir seu escopo, detalhar as regras de negócio para saber quais elementos serão necessário no projeto e qual o comportamento de cada um deles.
 
 Escolhi esse projeto para testar minhas habilidades de desenvolvedor, na costrução completa de um projeto, desde a identificação de um problema até a construção lógica para sua solução. Escolhi e linguagem Python por ser a que escolhi para trilhar essa fornada e minha idéia inicial é explocar o paradigma de Orientação a Objeto.
+
+Aprendi a real importância de realizar os teste individuais a implementação/alteração realizada, isso para garantir que o programa continuará funcionando ou será mais fácil detectar o erro. Ou ponto importante é trabalhar com uma **branch** específica, assim terá um controle maior sobre o que acontece com o programa inclusive possibilitanto rollback caso necessário. 
