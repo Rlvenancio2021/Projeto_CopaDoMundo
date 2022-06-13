@@ -15,6 +15,11 @@ class Time:
             f"os jogadores que marcaram gol foram {self.__artileiro}"
         )
 
+    def dados_do_time(self):
+        dados_do_time = {}
+        dados_do_time[self.__nome_do_time] = self.__escalacao
+        return dados_do_time
+
     def inclui_jogadores(self):
         jogador = input("Digite o nome do jogador").capitalize().strip()
         self.__escalacao.append(jogador)
@@ -25,11 +30,14 @@ class Time:
             Resp = input("Deseja incluir outro jogador? \"S\" ou \"N\"").upper()
 
     def exclui_jogador(self):
-        jogador_a_excluir = input("Digite o jogador que serão escluido da escalação: ").capitalize().strip()
+        jogador_a_excluir = input("Digite o jogador(es) que será(ão) escluido(s) da escalação: ").capitalize().strip()
         for jogador in self.__escalacao:
             if jogador_a_excluir == jogador:
                 self.__escalacao.remove(jogador)
-        return "Jogador excluido"
+                resp = "Jogador excluído com sucesso!"
+            else:
+                resp = "Jogador não está na lista!"
+        return resp
 
     def alterar_tecnico(self):
         novo_tecnico = input("Digite o nome do novo técnico: ").capitalize().strip()
@@ -42,7 +50,7 @@ class Time:
             self.__artileiro[nome_do_jogador] = total_gols_marcados
             self.__saldo_de_gols += total_gols_marcados
         else:
-            print(f'O jogador {nome_do_jogador} não joga neste time')
+            print(f'O {nome_do_jogador} não joga neste time')
 
     def sofre_gol(self):
         gols_sofridos = int(input("Digite a quantidade de gols sofridos: "))
