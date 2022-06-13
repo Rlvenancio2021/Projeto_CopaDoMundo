@@ -21,23 +21,39 @@ class Time:
         return dados_do_time
 
     def inclui_jogadores(self):
-        jogador = input("Digite o nome do jogador").capitalize().strip()
-        self.__escalacao.append(jogador)
-        Resp = input("Deseja incluir outro jogador? \"S\" ou \"N\"").upper()
-        while Resp == "S":
+        validacao1 = input("Sabe quantos jogadores serão cadastrado? \"S\" ou \"N\"").upper()
+        if validacao1=="S":
+            quantidade = int(input("Quantos jogadores serão inseridos:"))
+            cont = 0
+            while quantidade > cont:
+                jogador = input("Digite o nome do jogador").capitalize().strip()
+                while jogador == "":
+                    print("Favor digitar um nome válido!")
+                    jogador = input("Digite o nome do jogador").capitalize().strip()
+                self.__escalacao.append(jogador)
+                cont += 1
+        else:
             jogador = input("Digite o nome do jogador").capitalize().strip()
+            while jogador == "":
+                print("Favor digitar um nome válido!")
+                jogador = input("Digite o nome do jogador").capitalize().strip()
             self.__escalacao.append(jogador)
             Resp = input("Deseja incluir outro jogador? \"S\" ou \"N\"").upper()
+            while Resp == "S":
+                jogador = input("Digite o nome do jogador").capitalize().strip()
+                while jogador == "":
+                    print("Favor digitar um nome válido!")
+                    jogador = input("Digite o nome do jogador").capitalize().strip()
+                self.__escalacao.append(jogador)
+                Resp = input("Deseja incluir outro jogador? \"S\" ou \"N\"").upper()
 
     def exclui_jogador(self):
-        jogador_a_excluir = input("Digite o jogador(es) que será(ão) escluido(s) da escalação: ").capitalize().strip()
-        for jogador in self.__escalacao:
-            if jogador_a_excluir == jogador:
-                self.__escalacao.remove(jogador)
-                resp = "Jogador excluído com sucesso!"
-            else:
-                resp = "Jogador não está na lista!"
-        return resp
+        jogador_a_excluir = input("Digite o jogador que será excluído do time: ").capitalize().strip()
+        if jogador_a_excluir in self.__escalacao:
+            self.__escalacao.remove(jogador_a_excluir)
+            return "Jogador excluído com sucesso!"
+        else:
+            return "Jogador não está na lista!"
 
     def alterar_tecnico(self):
         novo_tecnico = input("Digite o nome do novo técnico: ").capitalize().strip()
