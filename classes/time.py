@@ -62,15 +62,15 @@ class Time:
     def marca_gol(self):
         nome_do_jogador = input("Qual jogador marcou gol: ").capitalize().strip()
         if nome_do_jogador in self.__escalacao:
-            total_gols_marcados = int(input("Quantos gols foram marcados: "))
+            total_gols_marcados = int(input(f"Quantos gols {nome_do_jogador} marcou nesse jogo: "))
             self.__artileiro[nome_do_jogador] = total_gols_marcados
-            self.__saldo_de_gols += total_gols_marcados
+            self.__saldo_de_gols += 1
         else:
             print(f'O {nome_do_jogador} não joga neste time')
 
     def sofre_gol(self):
-        gols_sofridos = int(input("Digite a quantidade de gols sofridos: "))
-        self.__saldo_de_gols -= gols_sofridos
+        gol_sofrido = 1
+        self.__saldo_de_gols -= gol_sofrido
 
     def artileiro(self):
         return self.__artileiro
