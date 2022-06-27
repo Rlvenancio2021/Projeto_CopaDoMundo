@@ -1,26 +1,8 @@
 class Jogador:
-    def __init__(self, nome, time):
+    def __init__(self,nome):
         self.__nome = nome.title().strip()
-        self.__time = time.title().strip()
         self.__gols_marcados = 0
-
-    def altera_nome_jogador(self, novo_nome):
-        self.__nome = novo_nome.title().strip()
-
-    def altera_time(self, novo_time):
-        self.__time = novo_time.title().strip()
-
-    def marca_gol(self):
-        self.__gols_marcados += 1
-        return "Gol anotado com sucesso!"
-
-    def anula_gol(self):
-        self.__gols_marcados -= 1
-        return "Gol anulado com sucesso!"
-
-    def dados_jogador(self):
-        jogador = {self.__nome:[self.__time, self.__gols_marcados]}
-        return jogador
+        return self.__nome, self.__gols_marcados
 
 class Time:
     def __init__(self):
