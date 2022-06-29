@@ -11,8 +11,15 @@ class Jogador:
     def dados(self):
         return self.__primeiro_nome, self.__nome_completo, self.__gols_marcados, self.__faltas_cometidas, self.__faltas_sofridas, self.__cartoes_recebido
 
+class Time():
+    def __init__(self, nome_do_time, nome_do_tecnico):
+        self.__nome_do_time = nome_do_time.title().strip()
+        self.__nome_do_tecnico = nome_do_tecnico.title().strip()
         self.__escalacao = {}
+        self.__gols_marcados = 0
+        self.__gols_sofridos = 0
         self.__saldo_de_gols = 0
+        self.__artilheiros = {}
 
     def inclui_jogador(self, nome):
         jogador = super().__init__(nome)
