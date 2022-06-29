@@ -7,6 +7,10 @@ class Jogador:
         self.__faltas_sofridas = 0
         self.__cartoes_recebido = []
 
+    @property
+    def dados(self):
+        return self.__primeiro_nome, self.__nome_completo, self.__gols_marcados, self.__faltas_cometidas, self.__faltas_sofridas, self.__cartoes_recebido
+
         self.__escalacao = {}
         self.__saldo_de_gols = 0
 
