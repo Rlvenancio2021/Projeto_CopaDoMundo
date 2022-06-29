@@ -1,13 +1,12 @@
 class Jogador:
-    def __init__(self,nome):
-        self.__nome = nome.title().strip()
+    def __init__(self, primeiro_nome, nome_completo):
+        self.__primeiro_nome = primeiro_nome.title().strip()
+        self.__nome_completo = nome_completo.title().strip()
         self.__gols_marcados = 0
-        return self.__nome, self.__gols_marcados
+        self.__faltas_cometidas = 0
+        self.__faltas_sofridas = 0
+        self.__cartoes_recebido = []
 
-class Time(Jogador):
-    def __init__(self, time, tecnico):
-        self.__nome_do_time = time.title().strip()
-        self.__tecnico = tecnico.title().strip()
         self.__escalacao = {}
         self.__saldo_de_gols = 0
 
