@@ -79,7 +79,7 @@ class Time():
             self.__artilheiros[jogador] = self.__escalacao[jogador]['Gols Marcados']
         return "Atualizado com sucesso!"
 
-    def apresenta_artillheiros(self):
+    def apresenta_artilheiros(self):
         return self.__artilheiros
 
     def busca_jogador(self, nome):
