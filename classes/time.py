@@ -72,7 +72,7 @@ class Time():
         return "Gol sofrido anotado com sucesso!"
 
     def saldo_de_gols(self):
-        return f"O {self.__nome_do_time} marcou {self.__gols_marcados} gols, sofreu {self.__gols_sofridos} gols e possui um saldo de {self.__saldo_de_gols} gols."
+        print(f"O {self.__nome_do_time} marcou {self.__gols_marcados} gols, sofreu {self.__gols_sofridos} gols e possui um saldo de {self.__saldo_de_gols} gols.")
 
     def atualiza_artilheiros(self):
         for jogador in self.__escalacao.keys():
@@ -80,11 +80,30 @@ class Time():
         return "Atualizado com sucesso!"
 
     def apresenta_artilheiros(self):
-        return self.__artilheiros
+        print(self.__artilheiros)
 
     def busca_jogador(self, nome):
         jogador = nome.title().strip()
         if jogador in self.__escalacao.keys():
             print(self.__escalacao[jogador])
         else:
-            return f"O jogador {jogador} não está escalado nesse time!"
+            print(f"O jogador {jogador} não está escalado nesse time!")
+
+    def apresenta_time(self):
+        print(f"Time: {self.__nome_do_time},\n"
+              f"Técnico: {self.__nome_do_tecnico},\n"
+              f"Escalação: {self.__escalacao.keys()},\n"
+              f"Gols marcados: {self.__gols_marcados},\n"
+              f"Gols sofridos: {self.__gols_sofridos},\n"
+              f"Saldo de gols: {self.__saldo_de_gols},\n"
+              f"Lista de artilheiros: {self.__artilheiros}")
+
+    def falta_cometida(self, nome):
+        jogador = nome.title().strip()
+        self.__escalacao[jogador]["Faltas Cometidas"] += 1
+        return "Falta marcada com sucesso!"
+
+    def falta_sofrida(self, nome):
+        jogador = nome.title().strip()
+        self.__escalacao[jogador]["Faltas Sofridas"] += 1
+        return "Falta marcada com sucesso!"
